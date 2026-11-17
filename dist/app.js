@@ -8,3 +8,7 @@ let ticking=false;const hero=document.querySelector('.hero'),photoLayer=document
 
 const opening=document.querySelector('.opening');
 if(opening){const replay=document.querySelector('#opening-replay'),skip=document.querySelector('#opening-skip');opening.querySelectorAll('.opening-menu>a').forEach((a,i)=>a.style.setProperty('--menu-order',i));let openingTimer;function finishOpening(){opening.classList.remove('is-playing');clearTimeout(openingTimer);skip.hidden=true}function playOpening(){finishOpening();if(reduced.matches)return;skip.hidden=false;void opening.offsetWidth;opening.classList.add('is-playing');openingTimer=setTimeout(finishOpening,document.body.classList.contains("photo-home")?3800:7200)}replay.addEventListener('click',()=>{opening.scrollIntoView({behavior:'instant',block:'start'});playOpening()});skip.addEventListener('click',finishOpening);opening.querySelectorAll('a').forEach(a=>a.addEventListener('click',finishOpening));reduced.addEventListener('change',finishOpening);playOpening();}
+
+// Return focus when dismissing the mobile navigation.
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.activeElement?.closest('#mobile-menu'))menuButton.focus()});
+document.addEventListener('click',e=>{if(!menu.hidden&&!menu.contains(e.target)&&!menuButton.contains(e.target)){menu.hidden=true;menuButton.setAttribute('aria-expanded','false')}});

@@ -184,3 +184,36 @@ header .shopping-link svg{display:block;width:24px;height:24px;fill:none;stroke:
  .menu-toggle span{margin:0;font-size:15px}
  #mobile-menu:not([hidden]),.inner-page #mobile-menu:not([hidden]){top:82px;left:5%;right:5%;max-height:calc(100svh - 100px)}
 }
+
+/* A small illustrated invitation, revealed from the mobile menu button. */
+@media(max-width:760px){
+ #mobile-menu:not([hidden]),.inner-page #mobile-menu:not([hidden]){display:block;position:absolute;top:80px;left:5%;right:5%;z-index:20;padding:22px 22px 12px;background:#faf8ef;border:1px solid #d5dac6;border-radius:24px 8px 24px 24px;box-shadow:0 18px 45px #263f2f24;max-height:calc(100svh - 96px);overflow-y:auto;overscroll-behavior:contain;transform-origin:92% 0;animation:menu-bloom .48s cubic-bezier(.2,.85,.3,1) both}
+ .menu-welcome{position:relative;padding:2px 0 17px;border-bottom:1px solid #dce0cf}
+ .menu-kicker{font-size:8px;letter-spacing:.17em;color:#7c8668}
+ .menu-welcome p{font-family:var(--serif);font-size:18px;font-weight:400;letter-spacing:.05em;margin-top:5px}
+ .menu-spark{position:absolute;right:0;top:0;color:#b49a59;font-size:29px}
+ #mobile-menu nav{display:grid;padding:7px 0}
+ #mobile-menu nav a{display:grid;grid-template-columns:23px 1fr 17px;align-items:center;gap:8px;min-height:46px;padding:10px 5px;border-bottom:1px solid #e7e9dd;font-size:12px;line-height:1.6;letter-spacing:.04em;border-radius:6px;transition:background .2s,transform .2s}
+ #mobile-menu nav a:last-child{border-bottom:0}
+ #mobile-menu nav a:hover,#mobile-menu nav a:focus-visible{background:#edf0df;transform:translateX(3px)}
+ .menu-number{font-family:Georgia,serif;font-size:10px;font-style:italic;color:#a49164}
+ .menu-arrow{color:#a1aa85;font-size:14px}
+ .menu-goodbye{display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 0 2px;border-top:1px solid #dce0cf;color:#677954}
+ .menu-goodbye p{font-family:var(--serif);font-size:9px;letter-spacing:.04em;margin:0}
+ .menu-goodbye svg{width:30px;height:26px;color:#b49a70}
+ .menu-goodbye>span{font-size:19px;color:#b49a70}
+ .menu-toggle[aria-expanded=true]{background:#e7ecd9;border-color:#aab797}
+ @keyframes menu-bloom{from{opacity:0;transform:translateY(-8px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+}
+
+@media(max-width:760px){
+ #mobile-menu:not([hidden]),.inner-page #mobile-menu:not([hidden]){background:#f7f1e5;padding:25px 24px 15px;border-radius:20px 6px 20px 20px}
+ .menu-welcome{padding:0 0 18px;border:0}
+ .menu-kicker{font-size:8px;color:#465f49;letter-spacing:.14em}
+ .menu-spark{font-size:22px;top:-9px;right:1px}
+ #mobile-menu nav{padding:0}
+ #mobile-menu nav a{min-height:50px;padding:13px 0;grid-template-columns:16px 1fr;gap:7px;font-size:11px;border-color:#d7ddcb;border-radius:0}
+ .menu-number{font-style:normal;font-size:10px;color:#9b8551}
+ .menu-arrow{display:none}
+ .menu-goodbye{margin-top:8px;border-top:0;padding-top:13px}
+}
