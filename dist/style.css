@@ -240,3 +240,9 @@ header .shopping-link svg{display:block;width:24px;height:24px;fill:none;stroke:
 .about-hello{font-size:12px;letter-spacing:.06em}.about-welcome-copy h2{font-size:clamp(26px,2.6vw,36px);font-weight:400;line-height:1.8;margin:18px 0 26px}
 .about-welcome-copy>p:not(.about-hello){font-size:13px;line-height:2.2;max-width:39em}.about-welcome+#story{border-top:1px solid #d7d9ca;padding-top:70px}.about-welcome+#story .intro-copy p{max-width:40em}
 @media(max-width:760px){.about-welcome{grid-template-columns:minmax(0,1fr);gap:28px;padding-bottom:46px}.about-welcome h1{font-size:26px;margin-top:14px}.about-welcome h1 span{font-size:14px;margin-top:4px}.about-welcome-title{position:relative}.about-leaf{position:absolute;right:0;bottom:0;width:55px;margin:0}.about-welcome-copy h2{font-size:28px;margin:14px 0 22px}.about-welcome-copy>p:not(.about-hello){font-size:12px;line-height:2.2}.about-welcome+#story{padding-top:42px}.about-welcome+#story .intro-copy h2{font-size:25px;line-height:1.8}}
+
+/* Keep the supplied farm portrait complete, with the original illustrated border. */
+.about-farm-photo{margin:28px 0 0;width:100%;max-width:480px;overflow:hidden;border-radius:16px;background:#fff}
+.about-farm-photo img{display:block;width:100%;height:auto;object-fit:contain}
+.social-links .instagram-link svg{color:white;background:radial-gradient(circle at 25% 105%,#ffdb7b 0%,#f9a445 22%,#e54370 48%,#b13ab5 72%,#6650c8 100%);padding:4px;border-radius:8px;width:30px;height:30px;flex-shrink:0}
+@media(max-width:760px){.about-farm-photo{margin-top:24px;max-width:440px}.about-welcome{gap:30px}}
