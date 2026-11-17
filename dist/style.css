@@ -172,3 +172,15 @@ img{height:auto}
   .opening-site header .official-face{width:28px}
   .shopping-link{font-size:12px;gap:4px}.shopping-link svg{display:none}
 }
+
+/* Compact shopping mark and a single, collision-free mobile header row. */
+header .shopping-link{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 44px;padding:10px;gap:0;border:0;position:relative;top:0}
+header .shopping-link svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){
+ .opening-site header,.photo-home header,.inner-page header{height:88px;padding:14px 5%;gap:10px;display:flex;align-items:center;justify-content:flex-start}
+ .opening-site header .official-brand,.photo-home header .official-brand,.inner-page header .official-brand{top:0;margin-right:auto;flex-shrink:0}
+ .opening-site header .shopping-link,.photo-home header .shopping-link,.inner-page header .shopping-link{position:static;top:auto;margin:0;width:44px;height:44px;flex:0 0 44px}
+ .opening-site .menu-toggle,.inner-page .menu-toggle{position:static;top:auto;right:auto;margin:0;display:flex;align-items:center;justify-content:center;gap:7px;flex:0 0 70px;height:44px;min-height:44px;padding:0 10px;font-size:8px;line-height:1;border:1px solid #bcc3ae;border-radius:24px}
+ .menu-toggle span{margin:0;font-size:15px}
+ #mobile-menu:not([hidden]),.inner-page #mobile-menu:not([hidden]){top:82px;left:5%;right:5%;max-height:calc(100svh - 100px)}
+}
