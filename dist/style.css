@@ -131,3 +131,44 @@ header .official-brand{position:relative;padding-bottom:14px}header .official-lo
 
 img{height:auto}
 @media(min-width:761px){.photo-home .opening-full-photo{background:#f6efe4}.photo-home .opening-full-photo img{mask-image:linear-gradient(90deg,transparent 42%,#000 65%)}}
+
+/* Mobile composition: preserve the complete gift and keep content in reading order. */
+@media(max-width:760px){
+  .photo-home .opening{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0 0 48px;background:#f6efe4;overflow:hidden}
+  .photo-home .opening-full-photo{position:relative;inset:auto;z-index:auto;order:0;width:100%;height:auto;aspect-ratio:1;background:#e6c7a5}
+  .photo-home .opening-full-photo img{width:100%;height:100%;object-fit:contain;object-position:center;mask-image:none}
+  .photo-home .opening-photo-shade{display:none}
+  .photo-home .full-photo-caption{order:1;position:static;margin:14px 7% 0;padding:0;font-size:11px;line-height:1.8;background:none;text-align:right}
+  .photo-home .opening-copy{order:2;width:auto;max-width:none;margin:32px 7% 0}
+  .photo-home .opening-copy h1{font-size:clamp(25px,7vw,34px);line-height:1.75;letter-spacing:.04em;margin:20px 0 24px}
+  .photo-home .opening-greeting{margin:0 0 20px}
+  .photo-home .opening-menu{order:3;position:static;width:auto;margin:36px 7% 0;padding-top:20px;gap:0 16px}
+  .photo-home .opening-menu>a{min-height:48px;white-space:normal;font-size:11px;line-height:1.7}
+  .photo-home .opening-controls{order:4;position:static;margin:25px 7% 0;display:flex;flex-wrap:wrap;gap:12px}
+  .photo-home .opening-controls button{min-height:44px}
+  .photo-home .opening>.doodle-corner{top:auto;bottom:18px;right:6%;width:40px;pointer-events:none}
+  .opening-site header,.photo-home header,.inner-page header{height:126px;padding:18px 6% 54px;align-items:center}
+  .opening-site header .official-brand,.photo-home header .official-brand,.inner-page header .official-brand,
+  .photo-home header .shopping-link,.inner-page header .shopping-link{top:0}
+  .opening-site .menu-toggle,.inner-page .menu-toggle{top:78px;min-height:40px;padding:8px 14px}
+  #mobile-menu:not([hidden]),.inner-page #mobile-menu:not([hidden]){top:122px;max-height:calc(100svh - 140px);overflow-y:auto}
+  #mobile-menu a{min-height:44px}
+  .intro .gift-photo{grid-column:1/-1;width:100%;max-width:440px;margin:12px auto 0;justify-self:center}
+  .intro .corrected-photo img{width:100%;height:auto;object-fit:contain}
+  .journal-grid .journal-card{width:100%;margin-left:0}
+  .journal-card img{height:auto;aspect-ratio:auto;object-fit:contain}
+  .november-hero .hero-photo{width:100%;margin:0}
+  .november-hero .hero-photo img,.package-image img{height:auto;object-fit:contain}
+  .produce-image img{height:auto;aspect-ratio:3/2;object-fit:contain}
+  .catalog-visual img{height:auto;aspect-ratio:3/2;object-fit:cover}
+  .catalog-title{left:20px;top:20px;font-size:20px}.catalog-title em{font-size:28px}
+  .examples p{grid-template-columns:minmax(0,110px) minmax(0,1fr)}
+  .section{padding-left:7%;padding-right:7%}
+}
+@media(max-width:374px){
+  .opening-site header .official-brand{width:135px;gap:7px}
+  .opening-site header .official-wordmark{width:100px}
+  .opening-site header .official-location{width:100px;font-size:5.5px}
+  .opening-site header .official-face{width:28px}
+  .shopping-link{font-size:12px;gap:4px}.shopping-link svg{display:none}
+}
